@@ -1,0 +1,142 @@
+"use client";
+
+import Body from "@/components/Body";
+import Transaksi from "@/components/Transaksi";
+import DayCard from "../../../../../src/components/DayCard";
+import Header from "@/components/Header"
+import { Card, CardContent } from "@/components/ui/card";
+import Sidebar from "@/components/sidebar_LPG";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import Logo from "@/components/logo";
+import Norton from "@/components/norton";
+import { pageToRoute } from "next/dist/build/utils";
+import { useRouter } from "next/navigation";
+import Navbar from "@/components/navbar";
+import Profile from "@/components/profile";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { useState } from "react";
+import { Menu, Lock, LogOut, Calendar } from "lucide-react"
+import {
+LineChart,
+Line,
+XAxis,
+YAxis,
+Tooltip,
+ResponsiveContainer,
+} from "recharts"
+
+import Order from "@/components/order_LPG";
+import Body_T from "@/components/Body_T";
+import Buat_p from "@/components/buat_pesanan_LPG";
+import DetailPesanan from "@/components/detail_pesanan_LPG";
+
+const lineData = [
+{ day: "06 Jan", value: 800000 },
+{ day: "07 Jan", value: 0 },
+{ day: "08 Jan", value: 400000 },
+{ day: "09 Jan", value: 1200000 },
+{ day: "10 Jan", value: 1600000 },
+{ day: "11 Jan", value: 0 },
+{ day: "12 Jan", value: 0 },
+]
+
+
+const tabungData = [
+{ day: "06 Jan", value: 50 },
+{ day: "07 Jan", value: 0 },
+{ day: "08 Jan", value: 25 },
+{ day: "09 Jan", value: 75 },
+{ day: "10 Jan", value: 100 },
+{ day: "11 Jan", value: 0 },
+{ day: "12 Jan", value: 0 },
+]
+export default function DashboardPage(){
+    const [open, setOpen] = useState(false);
+    const router = useRouter();
+    const [currentDate, setCurrentDate] = useState(new Date());
+    const daysData = [
+    {
+      day: "Senin",
+      date: "2026-02-02", 
+      count: 200,
+      label: "Tabung",
+      status: "success",
+    },
+    {
+      day: "Selasa",
+      date: "2026-02-03",
+      count: 156,
+      label: "Tabung",
+      status: "success",
+    },
+    {
+      day: "Rabu",
+      date: "2026-02-04",
+      count: 80,
+      label: "Tabung",
+      status: "success",
+    },
+    {
+      day: "Kamis",
+      date: "2026-02-05", 
+      count: 0,
+      label: "Tabung",
+      status: "error",
+    },
+    {
+      day: "Jumat",
+      date: "2026-02-06",
+      count: 178,
+      label: "Tabung",
+      status: "success",
+    },
+  ];
+
+   const isToday = (dateString: string) => {
+    const itemDate = new Date(dateString);
+    return (
+    itemDate.getDate() === currentDate.getDate() && itemDate.getMonth() === currentDate.getMonth() 
+    && itemDate.getFullYear() === currentDate.getFullYear() 
+    )
+   }
+
+    return (
+        
+       <div
+      className="min-h-screen flex pt-17 justify-center bg-cover bg-center"
+      style={{ backgroundImage: "url('/img/bg_tower.png')" }}
+    >
+      {/* overlay */}
+     <Sidebar open={open} onClose={() => setOpen(false)} />
+      <Logo />
+      <div className="w-full max-w-md mx-auto font-sans ">
+                 {/*navbar*/}
+                  <Navbar onOpen={() => setOpen(true)} />
+              <CardContent className="flex flex-col gap-6 ">
+
+    {/*headers*/}
+     <Header />
+     
+    {/*Body*/}
+            <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
+        <CardContent className="px-4 ">
+        <div className="flex justify-between items-center  ">
+        <div>
+        <h2 className="font-bold text-2xl">Buat Pesanan</h2>
+        </div>
+        </div>
+
+   <div className="space-y-5">
+   <DetailPesanan />
+</div>
+</CardContent>
+</Card>
+</CardContent>
+<h1 className="text-[10px] text-gray-800 text-center mb-5 ">PT Bank Syariah Indonesia, Tbk. adalah pelaku jasa keuangan berizin dan diawasi oleh Otoritas Jasa Keuangan serta merupakan peserta penjamin LPS
+@2021 Bank Syariah Indonesia BSI CALL 1500789 - www.bankbsi.co.id - tsc@bankbsi.co.id</h1>      
+</div>
+    </div>
+    );
+}
