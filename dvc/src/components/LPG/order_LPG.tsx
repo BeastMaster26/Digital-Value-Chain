@@ -7,7 +7,7 @@ import Logo_side from "@/components/logo_sidebar";
 import { usePathname, useRouter } from "next/navigation";
 import Image from 'next/image'
 import { ShoppingCart } from "lucide-react";
-import { Card } from "./ui/card";
+import { Card } from "../ui/card";
 
 export default function order() {
 

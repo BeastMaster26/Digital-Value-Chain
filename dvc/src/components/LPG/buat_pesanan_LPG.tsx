@@ -7,10 +7,10 @@ import Logo_side from "@/components/logo_sidebar";
 import { usePathname, useRouter } from "next/navigation";
 import Image from 'next/image'
 import { ShoppingCart } from "lucide-react";
-import { Card } from "./ui/card";
-import { Input } from "./ui/input";
+import { Card } from "../ui/card";
+import { Input } from "../ui/input";
 import { Label } from "radix-ui";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 export default function buat_pesanan() {
 

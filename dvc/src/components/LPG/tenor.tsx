@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { Minus, Plus } from "lucide-react";
 import { Line } from "recharts";
 

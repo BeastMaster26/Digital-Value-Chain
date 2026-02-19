@@ -8,11 +8,11 @@ import Logo_side from "@/components/logo_sidebar";
 import { usePathname, useRouter } from "next/navigation";
 import Image from 'next/image'
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Input } from "./ui/input";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Input } from "../ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Tenor from "./tenor";
 import tenor from "./tenor";
 

@@ -3,8 +3,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Logo from "./logo";
-import Norton from "./norton";
+import Logo from "../logo";
+import Norton from "../norton";
 import { pageToRoute } from "next/dist/build/utils";
 import { useRouter } from "next/navigation";
 
