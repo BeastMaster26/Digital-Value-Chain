@@ -1,18 +1,18 @@
 "use client";
 
-import Body from "@/components/LPG/Body";
-import Transaksi from "@/components/LPG/Transaksi";
-import DayCard from "../../../../components/LPG/DayCard";
-import Header from "@/components/LPG/Header"
+import Body from "@/components/lpg/Body";
+import Transaksi from "@/components/lpg/Transaksi";
+import DayCard from "../../../../../components/lpg/DayCard";
+import Header from "@/components/lpg/Header"
 import { Card, CardContent } from "@/components/ui/card";
-import Sidebar from "@/components/LPG/sidebar_LPG";
+import Sidebar from "@/components/lpg/sidebar-lpg";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
 import Norton from "@/components/norton";
 import { pageToRoute } from "next/dist/build/utils";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/LPG/navbar";
+import Navbar from "@/components/lpg/navbar";
 import Profile from "@/components/profile";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -27,8 +27,10 @@ Tooltip,
 ResponsiveContainer,
 } from "recharts"
 
-import Order from "@/components/LPG/order_LPG";
-import Body_T from "@/components/LPG/Body_T";
+import Order from "@/components/lpg/order-lpg";
+import Body_T from "@/components/lpg/Body-t";
+import Buat_p from "@/components/lpg/buat-pesanan-lpg";
+import DetailPesanan from "@/components/lpg/detail-pesanan-lpg";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },
@@ -50,7 +52,7 @@ const tabungData = [
 { day: "11 Jan", value: 0 },
 { day: "12 Jan", value: 0 },
 ]
-export default function DashboardPage(){
+export default function Pesanan(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -120,9 +122,14 @@ export default function DashboardPage(){
     {/*Body*/}
             <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
         <CardContent className="px-4 ">
-        <Body_T />
-   <div className="space-y-4">
-   <Order/>
+        <div className="flex justify-between items-center  ">
+        <div>
+        <h2 className="font-bold text-2xl">Buat Pesanan</h2>
+        </div>
+        </div>
+
+   <div className="space-y-5">
+   <DetailPesanan />
 </div>
 </CardContent>
 </Card>

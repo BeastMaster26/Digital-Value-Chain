@@ -2,7 +2,7 @@
 
 import Body from "@/components/lpg/Body";
 import Transaksi from "@/components/lpg/Transaksi";
-import DayCard from "../../../components/lpg/DayCard";
+import DayCard from "../../../../components/lpg/DayCard";
 import Header from "@/components/lpg/Header"
 import { Card, CardContent } from "@/components/ui/card";
 import Sidebar from "@/components/lpg/sidebar-lpg";
@@ -26,9 +26,10 @@ YAxis,
 Tooltip,
 ResponsiveContainer,
 } from "recharts"
-import { Capsule } from "@/components/capsule";
 
-
+import Order from "@/components/lpg/order-lpg";
+import Body_T from "@/components/lpg/Body-t";
+import Buat_p from "@/components/lpg/buat-pesanan-lpg";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },
@@ -50,7 +51,7 @@ const tabungData = [
 { day: "11 Jan", value: 0 },
 { day: "12 Jan", value: 0 },
 ]
-export default function DashboardPage(){
+export default function BuatPesanan(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -116,14 +117,18 @@ export default function DashboardPage(){
 
     {/*headers*/}
      <Header />
-    
+     
     {/*Body*/}
-            <Card className="rounded-xs shadow mb-4 bg-white/70 backdrop-blur-md border-none ">
+            <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
         <CardContent className="px-4 ">
-        <Body />
-   <div className="space-y-4">
-  <DayCard />
-  <Transaksi />
+        <div className="flex justify-between items-center  ">
+        <div>
+        <h2 className="font-bold text-2xl">Buat Pesanan</h2>
+        </div>
+        </div>
+
+   <div className="space-y-5">
+   <Buat_p/>
 </div>
 </CardContent>
 </Card>

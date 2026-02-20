@@ -1,11 +1,11 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
-import Sidebar from "@/components/LPG/sidebar_LPG";
+import Sidebar from "@/components/lpg/sidebar-lpg";
 
 import Logo from "@/components/logo";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/LPG/navbar";
+import Navbar from "@/components/lpg/navbar";
 import Profile from "@/components/profile";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";

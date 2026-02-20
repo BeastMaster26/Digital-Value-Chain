@@ -3,7 +3,7 @@
 import { X } from "lucide-react";
 import Logo from '@/components/logo';
 import Link from "next/link";
-import Logo_side from "@/components/logo_sidebar";
+import Logo_side from "@/components/logo-sidebar";
 import { usePathname, useRouter } from "next/navigation";
 import Image from 'next/image'
 import { ShoppingCart } from "lucide-react";

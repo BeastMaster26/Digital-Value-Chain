@@ -1,23 +1,23 @@
 "use client";
 
-import Body from "@/components/LPG/Body";
-import Transaksi from "@/components/LPG/Transaksi";
-import DayCard from "../../../../../../components/LPG/DayCard";
-import Header from "@/components/LPG/Header"
+import Body from "@/components/lpg/Body";
+import Transaksi from "@/components/lpg/Transaksi";
+import DayCard from "../../../../../../components/lpg/DayCard";
+import Header from "@/components/lpg/Header"
 import { Card, CardContent } from "@/components/ui/card";
-import Sidebar from "@/components/LPG/sidebar_LPG";
+import Sidebar from "@/components/lpg/sidebar-lpg";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
 import Norton from "@/components/norton";
 import { pageToRoute } from "next/dist/build/utils";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/LPG/navbar";
+import Navbar from "@/components/lpg/navbar";
 import Profile from "@/components/profile";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
-import Pembiayaan from "@/components/LPG/pembiayaan"; // Adjust the import path if needed
+import Pembiayaan from "@/components/lpg/pembiayaan"; // Adjust the import path if needed
 
 
 const DetailPembiayaanPage = () => {
