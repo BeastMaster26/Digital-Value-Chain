@@ -1,11 +1,11 @@
 "use client";
 
 import Body from "@/components/LPG/body-done";
-import Transaksi from "@/components/LPG/transaksi-done";
-import DayCard from "../../../../components/LPG/day-card";
+import Transaksi from "@/components/LPG/Transaksi";
+import DayCard from "../../../../components/LPG/DayCard";
 import Header from "@/components/LPG/Header"
 import { Card, CardContent } from "@/components/ui/card";
-import Sidebar from "@/components/LPG/sidebar-lpg";
+import Sidebar from "@/components/LPG/sidebar_LPG";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
@@ -27,9 +27,9 @@ Tooltip,
 ResponsiveContainer,
 } from "recharts"
 
-import Order from "@/components/LPG/order-lpg";
+import Order from "@/components/LPG/order_LPG";
 
-import Buat_p from "@/components/LPG/buat-pesanan-lpg";
+import Buat_p from "@/components/LPG/buat_pesanan_LPG";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },

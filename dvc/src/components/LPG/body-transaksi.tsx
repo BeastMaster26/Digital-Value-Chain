@@ -1,6 +1,6 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
-import Sidebar from "@/components/LPG/sidebar-lpg";
+import Sidebar from "@/components/LPG/sidebar_LPG";
 
 import Logo from "@/components/logo";
 import { Button } from "../ui/button";
