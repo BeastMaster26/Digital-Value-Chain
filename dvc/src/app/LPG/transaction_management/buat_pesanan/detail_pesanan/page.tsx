@@ -52,7 +52,7 @@ const tabungData = [
 { day: "11 Jan", value: 0 },
 { day: "12 Jan", value: 0 },
 ]
-export default function DashboardPage(){
+export default function Pesanan(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     const [currentDate, setCurrentDate] = useState(new Date());
