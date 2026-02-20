@@ -2,7 +2,7 @@
 
 import Body from "@/components/LPG/Body";
 import Transaksi from "@/components/LPG/Transaksi";
-import DayCard from "../../../src/components/LPG/DayCard";
+import DayCard from "../../../../../components/LPG/DayCard";
 import Header from "@/components/LPG/Header"
 import { Card, CardContent } from "@/components/ui/card";
 import Sidebar from "@/components/LPG/sidebar_LPG";
@@ -29,6 +29,8 @@ ResponsiveContainer,
 
 import Order from "@/components/LPG/order_LPG";
 import Body_T from "@/components/LPG/Body_T";
+import Buat_p from "@/components/LPG/buat_pesanan_LPG";
+import DetailPesanan from "@/components/LPG/detail_pesanan_LPG";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },
@@ -120,9 +122,14 @@ export default function DashboardPage(){
     {/*Body*/}
             <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
         <CardContent className="px-4 ">
-        <Body_T />
-   <div className="space-y-4">
-   <Order/>
+        <div className="flex justify-between items-center  ">
+        <div>
+        <h2 className="font-bold text-2xl">Buat Pesanan</h2>
+        </div>
+        </div>
+
+   <div className="space-y-5">
+   <DetailPesanan />
 </div>
 </CardContent>
 </Card>

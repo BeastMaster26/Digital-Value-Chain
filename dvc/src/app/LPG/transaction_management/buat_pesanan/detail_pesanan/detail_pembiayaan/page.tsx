@@ -2,7 +2,7 @@
 
 import Body from "@/components/LPG/Body";
 import Transaksi from "@/components/LPG/Transaksi";
-import DayCard from "../../../../../../src/components/LPG/DayCard";
+import DayCard from "../../../../../../components/LPG/DayCard";
 import Header from "@/components/LPG/Header"
 import { Card, CardContent } from "@/components/ui/card";
 import Sidebar from "@/components/LPG/sidebar_LPG";
