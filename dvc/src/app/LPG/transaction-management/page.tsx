@@ -1,7 +1,7 @@
 "use client";
 
-import Body from "@/components/lpg/body";
-import Transaksi from "@/components/lpg/transaksi";
+import Body from "@/components/lpg/body-done";
+import Transaksi from "@/components/lpg/transaksi-done";
 import DayCard from "../../../components/lpg/day-card";
 import Header from "@/components/lpg/Header"
 import { Card, CardContent } from "@/components/ui/card";
@@ -28,7 +28,7 @@ ResponsiveContainer,
 } from "recharts"
 
 import Order from "@/components/lpg/order-lpg";
-import Body_T from "@/components/lpg/body-t";
+import Body_Transaksi from "@/components/lpg/body-transaksi";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },
@@ -120,7 +120,7 @@ export default function DashboardPage(){
     {/*Body*/}
             <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
         <CardContent className="px-4 ">
-        <Body_T />
+        <Body_Transaksi />
    <div className="space-y-4">
    <Order/>
 </div>

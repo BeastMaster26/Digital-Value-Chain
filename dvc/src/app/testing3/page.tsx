@@ -1,7 +1,7 @@
 "use client";
 
-import Body from "@/components/lpg/body";
-import Transaksi from "@/components/lpg/transaksi";
+import Body from "@/components/lpg/body-done";
+import Transaksi from "@/components/lpg/transaksi-done";
 import DayCard from "../../components/lpg/day-card";
 import Header from "@/components/lpg/Header"
 import { Card, CardContent } from "@/components/ui/card";

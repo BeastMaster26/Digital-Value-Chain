@@ -1,7 +1,7 @@
 "use client";
 
-import Body from "@/components/lpg/body";
-import Transaksi from "@/components/lpg/transaksi";
+import Body from "@/components/lpg/body-done";
+import Transaksi from "@/components/lpg/transaksi-done";
 import DayCard from "../../../../components/lpg/day-card";
 import Header from "@/components/lpg/Header"
 import { Card, CardContent } from "@/components/ui/card";
@@ -28,7 +28,7 @@ ResponsiveContainer,
 } from "recharts"
 
 import Order from "@/components/lpg/order-lpg";
-import Body_T from "@/components/lpg/body-t";
+
 import Buat_p from "@/components/lpg/buat-pesanan-lpg";
 
 const lineData = [
