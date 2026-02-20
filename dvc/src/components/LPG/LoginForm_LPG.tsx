@@ -37,7 +37,7 @@ import { useRouter } from "next/navigation";
           {/* Captcha */}
       <div className="flex items-center gap-2">
             <input className="flex-1 border-b border-gray-500 bg-transparent outline-none py-2" placeholder="Captcha" />           
-              <img src="/img/captcha.png" alt="Captcha" className="w-16 h-8" />
+              <img src="/img/Captcha.png" alt="Captcha" className="w-16 h-8" />
           </div>
         </div>
 
