@@ -26,7 +26,7 @@ YAxis,
 Tooltip,
 ResponsiveContainer,
 } from "recharts"
-import { Capsule } from "@/components/capsule";
+import { Capsule } from "@/components/Capsule";
 
 
 

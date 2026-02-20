@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Sidebar from "@/components/LPG/sidebar-lpg";
 
 import Logo from "@/components/logo";
-import { Capsule } from "../capsule";
+import { Capsule } from "../Capsule";
 import { useRouter } from "next/navigation";
 import Navbar from "@/components/LPG/navbar";
 import Profile from "@/components/profile";
