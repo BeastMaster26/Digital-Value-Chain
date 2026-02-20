@@ -1,8 +1,8 @@
 "use client";
 
-import Body from "@/components/lpg/Body";
-import Transaksi from "@/components/lpg/Transaksi";
-import DayCard from "../../../components/lpg/DayCard";
+import Body from "@/components/lpg/body";
+import Transaksi from "@/components/lpg/transaksi";
+import DayCard from "../../../components/lpg/day-card";
 import Header from "@/components/lpg/Header"
 import { Card, CardContent } from "@/components/ui/card";
 import Sidebar from "@/components/lpg/sidebar-lpg";
@@ -28,7 +28,7 @@ ResponsiveContainer,
 } from "recharts"
 
 import Order from "@/components/lpg/order-lpg";
-import Body_T from "@/components/lpg/Body-t";
+import Body_T from "@/components/lpg/body-t";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },

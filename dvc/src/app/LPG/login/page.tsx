@@ -1,4 +1,4 @@
-import LoginForm from '@/components/lpg/LoginForm-lpg';
+import LoginForm from '@/components/lpg/login-form-lpg';
 import Logo from '@/components/logo';
 import SvgComponent from '@/components/logo2';
 export default function LoginPage(){
