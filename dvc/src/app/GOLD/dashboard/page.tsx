@@ -1,5 +1,6 @@
 "use client";
 
+import Buat_p from "@/components/GOLD/buat_pesanan_GOLD";
 import Body from "@/components/LPG/body-done";
 import Transaksi from "@/components/LPG/Transaksi";
 import DayCard from "../../../components/LPG/DayCard";
@@ -26,7 +27,8 @@ YAxis,
 Tooltip,
 ResponsiveContainer,
 } from "recharts"
-import { Capsule } from "@/components/Capsule";
+
+import Order from "@/components/LPG/order_LPG";
 
 
 
@@ -50,7 +52,7 @@ const tabungData = [
 { day: "11 Jan", value: 0 },
 { day: "12 Jan", value: 0 },
 ]
-export default function DashboardPage(){
+export default function BuatPesanan(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -116,14 +118,18 @@ export default function DashboardPage(){
 
     {/*headers*/}
      <Header />
-    
+     
     {/*Body*/}
-            <Card className="rounded-xs shadow mb-4 bg-white/70 backdrop-blur-md border-none ">
+            <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
         <CardContent className="px-4 ">
-        <Body />
-   <div className="space-y-4">
-  <DayCard />
-  <Transaksi />
+        <div className="flex justify-between items-center  ">
+        <div>
+        <h2 className="font-bold text-2xl">Buat Pesanan</h2>
+        </div>
+        </div>
+
+   <div className="space-y-5">
+   <Buat_p/>    
 </div>
 </CardContent>
 </Card>

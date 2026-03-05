@@ -97,7 +97,7 @@ export default function pembiayaan() {
                 </div>
               
         </Card>
-        <Button onClick={() => router.push("/LPG/dashboard")} className="w-full rounded-xl bg-teal-600 hover:bg-teal-700 text-white">
+        <Button onClick={() => router.push("/LPG/transaction_management/buat_pesanan/detail_pesanan/detail_pembiayaan/sukses_pembayaran")} className="w-full rounded-xl bg-teal-600 hover:bg-teal-700 text-white">
             Konfirmasi Pembayaran
           </Button>
          </div>

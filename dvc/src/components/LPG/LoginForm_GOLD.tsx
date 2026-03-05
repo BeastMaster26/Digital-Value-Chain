@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 
 
 
- function LoginForm() {
+ function LoginFormGold() {
     const router = useRouter();
 
     return (
@@ -42,7 +42,7 @@ import { useRouter } from "next/navigation";
         </div>
 
         {/* Button */}
-        <Button onClick={() => router.push("/LPG/dashboard")} className="w-full bg-yellow-400 hover:bg-yellow-500 shadow-md text-black font-semibold">
+        <Button onClick={() => router.push("/GOLD/dashboard")} className="w-full bg-yellow-400 hover:bg-yellow-500 shadow-md text-black font-semibold">
           Login
         </Button>
 
@@ -59,4 +59,4 @@ import { useRouter } from "next/navigation";
     )
 }
 
-export default LoginForm;
+export default LoginFormGold;

@@ -12,7 +12,7 @@ import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import { Menu, Lock, LogOut, Calendar } from "lucide-react"
 
-export default function Body(){
+export default function Body_Gold(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     return (
@@ -22,7 +22,7 @@ export default function Body(){
         <h2 className="font-bold text-2xl">Dashboard</h2>
         <p className="text-sm font-bold mt-3">Sisa Kuota</p>
         </div>
-        <Button size="sm" variant="outline" className="rounded-xl text-xs bg-white" >
+        <Button size="sm" variant="outline" className="text-xs ">
         <Calendar className="w-3 h-3 mr-1" /> 1 Bulan Kedepan
         </Button>
         </div>
