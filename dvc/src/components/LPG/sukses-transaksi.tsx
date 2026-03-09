@@ -51,29 +51,35 @@ export default function TransaksiBerhasilPage() {
         </CardHeader>
 
         <CardContent className="">
-         <div className="grid grid-cols-1 [&>div]:flex [&>div]:justify-between space-y-4 font-medium pb-6 ">
-          <div>
-                  <h1 className="">Nominal Invoice</h1>
-                   <h1 className="">Rp. 1.465.000</h1>
-               </div>
-               <div>
-                  <h1 className="">Tenor</h1>
-                   <h1 className="">30 Hari</h1>
-               </div>
-               <div>
-                  <h1 className="">Nominal Ujrah</h1>
-                   <h1 className="">Rp. 125.000</h1>
-               </div>
-               <div>
-                  <h1 className="">Biaya Administrasi</h1>
-                   <h1 className="">Rp. 10.000</h1>
-               </div>
-               <div>
-                  <h1 className="">Total Pembayaran</h1>
-                   <h1 className="">Rp. 1.600.000</h1>
-               </div> 
-                
-         </div>
+          <div className="grid grid-cols-2 gap-y-4 gap-x-2 font-medium pb-6">
+
+    <span>Nominal Invoice</span>
+    <span className="text-right whitespace-nowrap">
+      Rp. 1.465.000
+    </span>
+
+    <span>Tenor</span>
+    <span className="text-right">30 Hari</span>
+
+    <span>Nominal Ujrah</span>
+    <span className="text-right whitespace-nowrap">
+      Rp. 125.000
+    </span>
+
+    <span>Biaya Administrasi</span>
+    <span className="text-right whitespace-nowrap">
+      Rp. 10.000
+    </span>
+
+    <span className="font-semibold">
+      Total Pembayaran
+    </span>
+
+    <span className="text-right font-semibold whitespace-nowrap">
+      Rp. 1.600.000
+    </span>
+
+  </div>
          <div className="bg-white rounded-lg p-2 shadow-md text-center text-[12px] font-semibold  "> 
                   Jatuh Tempo Pembiayaan 12 Februari 2026 
                 </div>
