@@ -8,7 +8,7 @@ export default function LoginPage(){
       style={{ backgroundImage: "url('/img/bg_tower.png')" }}
     >
       {/* overlay */}
-      <p className="">test</p>
+      
       <Logo />
       <LoginForm />
       
