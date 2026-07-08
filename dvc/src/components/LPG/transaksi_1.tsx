@@ -23,11 +23,11 @@ export default function User_transaksi() {
 
     return (
         <>
-        <div className="max-w-md mx-auto min-h-screen bg-white">
+        <div className="w-full bg-white">
 
             
 
-            <div className="px-4 pt-3 pb-6 space-y-4">
+            <div className="px-2 pt-3 pb-6 space-y-4">
 
                
 
@@ -117,7 +117,7 @@ export default function User_transaksi() {
                         </div>
                     </>
                 ) : (
-                    <div className="space-y-3">
+                    <div className="space-y-1">
                         <Label.Root className="text-gray-800 font-medium text-sm">Riwayat Pemesanan</Label.Root>
 
                         <Card className="p-0 overflow-hidden">
