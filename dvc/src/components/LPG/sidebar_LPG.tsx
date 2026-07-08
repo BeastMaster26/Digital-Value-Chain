@@ -19,7 +19,6 @@ export default function Sidebar({
     const router = useRouter();
 
     const menuItems = [
-        { img: "/img/back_office.png", label: "Back Office", path: "/back_office" },
         { img: "/img/dashboard.png", label: "Dashboard", path: "/LPG/dashboard" },
         { img: "/img/users.png", label: "User Management", path: "/LPG/user-management" },
         { img: "/img/transaction.png", label: "Transaction Management", path: "/LPG/transaction_management" },

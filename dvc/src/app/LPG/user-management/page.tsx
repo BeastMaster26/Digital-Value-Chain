@@ -1,7 +1,8 @@
 "use client";
 
 import Body from "@/components/LPG/body-done";
-import DayCard from "../../../../components/LPG/DayCard";
+import Transaksi from "@/components/LPG/Transaksi";
+import DayCard from "../../../components/LPG/DayCard";
 import Header from "@/components/LPG/Header"
 import { Card, CardContent } from "@/components/ui/card";
 import Sidebar from "@/components/LPG/sidebar_LPG";
@@ -26,7 +27,11 @@ Tooltip,
 ResponsiveContainer,
 } from "recharts"
 
-import Transaksi from "@/components/LPG/transaksi_1";
+import Order from "@/components/LPG/order_LPG";
+
+import Buat_p from "@/components/LPG/buat_pesanan_LPG";
+
+import User from "@/components/LPG/user";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },
@@ -120,12 +125,12 @@ export default function BuatPesanan(){
         <CardContent className="px-4 ">
         <div className="flex justify-between items-center  ">
         <div>
-        <h2 className="font-bold text-2xl">Buat Pesanan</h2>
+        <h2 className="font-bold text-2xl">User Managment</h2>
         </div>
         </div>
 
    <div className="space-y-5">
-  <Transaksi />
+   <User />
 </div>
 </CardContent>
 </Card>
