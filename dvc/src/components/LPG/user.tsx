@@ -1,144 +1,136 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ChevronRight, Menu } from "lucide-react";
+import { Check, ShieldCheck, UserRound } from "lucide-react";
 import { Card } from "../ui/card";
 import { Label } from "radix-ui";
 import { Button } from "../ui/button";
 
-type Tab = "information" | "statement";
+type Tab = "profile" | "users";
 
-const orderHistory = [
-    { date: "22/12/2025", amount: 227_000_000, grams: 100 },
-    { date: "15/12/2025", amount: 68_100_000, grams: 30 },
-    { date: "01/12/2025", amount: 340_500_000, grams: 150 },
-    { date: "18/11/2025", amount: 45_400_000, grams: 20 },
-    { date: "02/11/2025", amount: 227_000_000, grams: 100 },
-    { date: "10/10/2025", amount: 22_700_000, grams: 10 },
+const userInfo = {
+    name: "Ahmad Fauzi",
+    role: "Pemilik Agen LPG",
+    userId: "USR-LPG-001274",
+    phone: "0812-3456-7890",
+    email: "ahmad.fauzi@bewize.co.id",
+    branch: "BSI KC Jakarta Sudirman",
+    status: "Aktif",
+    verifiedAt: "22/12/2025 10:05:00",
+};
+
+const users = [
+    { name: "Ahmad Fauzi", role: "Owner", phone: "0812-3456-7890", status: "Aktif" },
+    { name: "Siti Aminah", role: "Admin Operasional", phone: "0813-2222-8899", status: "Aktif" },
+    { name: "Budi Santoso", role: "Staf Gudang", phone: "0815-7788-1000", status: "Aktif" },
+    { name: "Rina Lestari", role: "Kasir", phone: "0821-9988-7766", status: "Menunggu" },
 ];
 
 export default function User() {
-
-    const [activeTab, setActiveTab] = useState<Tab>("information");
+    const [activeTab, setActiveTab] = useState<Tab>("profile");
 
     return (
         <>
-        <div className="max-w-md mx-auto min-h-screen bg-white">
-
-            
-
+        <div className="max-w-md mx-auto bg-white">
             <div className="px-4 pt-3 pb-6 space-y-4">
-
-               
-
-                {/* Tabs - switch local state, not route */}
                 <div className="flex gap-2">
                     <Button
-                        onClick={() => setActiveTab("information")}
+                        onClick={() => setActiveTab("profile")}
                         className={
-                            activeTab === "information"
+                            activeTab === "profile"
                                 ? "flex-1 h-9 text-xs bg-linear-to-r from-teal-700 to-teal-500 text-white"
                                 : "flex-1 h-9 text-xs bg-white border-2 border-[#00A3A8] text-[#00A3A8]"
                         }
                     >
-                        LPG Acc Information
+                        Informasi User
                     </Button>
                     <Button
-                        onClick={() => setActiveTab("statement")}
+                        onClick={() => setActiveTab("users")}
                         className={
-                            activeTab === "statement"
+                            activeTab === "users"
                                 ? "flex-1 h-9 text-xs bg-linear-to-r from-teal-700 to-teal-500 text-white"
                                 : "flex-1 h-9 text-xs bg-white border-2 border-[#00A3A8] text-[#00A3A8]"
                         }
                     >
-                        Account Statement
+                        Daftar User
                     </Button>
                 </div>
 
-                {activeTab === "information" ? (
+                {activeTab === "profile" ? (
                     <>
-                        {/* LPG balance */}
                         <Card className="border-2 border-[#00A3A8] p-4 space-y-3">
-                            <div>
-                                <Label.Root className="text-gray-500 text-xs">LPG Balance</Label.Root>
-                                <p className="text-2xl font-semibold text-gray-800">614 | 3kg</p>
-                                <p className="text-sm text-gray-500">Rp13.508.000</p>
+                            <div className="flex items-start gap-3">
+                                <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center">
+                                    <UserRound className="w-6 h-6 text-[#00A3A8]" />
+                                </div>
+                                <div className="flex-1">
+                                    <Label.Root className="text-gray-500 text-xs">Nama User</Label.Root>
+                                    <p className="text-xl font-semibold text-gray-800">{userInfo.name}</p>
+                                    <p className="text-sm text-gray-500">{userInfo.role}</p>
+                                </div>
                             </div>
 
                             <div className="flex gap-2">
                                 <div className="flex-1 bg-gray-50 rounded-md p-2">
-                                    <Label.Root className="text-[10px] text-gray-400">Status NPWP</Label.Root>
+                                    <Label.Root className="text-[10px] text-gray-400">Status User</Label.Root>
                                     <p className="text-xs font-medium text-green-600 flex items-center gap-1 mt-1">
-                                        <Check className="w-3.5 h-3.5" /> Verified
+                                        <Check className="w-3.5 h-3.5" /> {userInfo.status}
                                     </p>
                                 </div>
                                 <div className="flex-1 bg-gray-50 rounded-md p-2">
-                                    <Label.Root className="text-[10px] text-gray-400">Potensi Keuntungan</Label.Root>
-                                    <p className="text-xs font-medium mt-1">
-                                        Rp22.500<span className="text-green-600">5.1%</span>
+                                    <Label.Root className="text-[10px] text-gray-400">Verifikasi</Label.Root>
+                                    <p className="text-xs font-medium text-green-600 flex items-center gap-1 mt-1">
+                                        <ShieldCheck className="w-3.5 h-3.5" /> Terverifikasi
                                     </p>
                                 </div>
                             </div>
                         </Card>
 
-                        {/* Buy / sell price */}
-                        <div className="flex gap-2">
-                            <Card className="flex-1 border-2 border-amber-400 p-3">
-                                <Label.Root className="text-[10px] text-gray-500">Buying Price (3/kg)</Label.Root>
-                                <p className="text-sm font-medium text-amber-500 mt-1">Rp22.000</p>
-                            </Card>
-                            <Card className="flex-1 border-2 border-[#00A3A8] p-3">
-                                <Label.Root className="text-[10px] text-gray-500">Selling Price (3/kg)</Label.Root>
-                                <p className="text-sm font-medium text-[#00A3A8] mt-1">Rp22.500</p>
-                            </Card>
-                        </div>
-                        <p className="text-[10px] text-gray-400">
-                            Terakhir diperbarui: 22/12/2025 10:05:00
-                        </p>
-
-                        {/* Portfolio */}
                         <div className="space-y-3">
-                            <Label.Root className="text-gray-800 font-medium text-sm">LPG Portofolio</Label.Root>
+                            <Label.Root className="text-gray-800 font-medium text-sm">Detail User</Label.Root>
 
                             <Card className="p-4 space-y-2.5">
-                                <PortfolioRow label="Nomor Akun" value="880707070707" />
-                                <PortfolioRow label="Total KG" value="614" strong />
-                                <PortfolioRow label="Rata-rata Harga Beli" value="Rp22.000/KG" />
-                                <PortfolioRow label="Total IDR" value="Rp11.000.000" />
-                                <PortfolioRow label="Total Harga Jual" value="Rp13.508.000" last />
+                                <InfoRow label="User ID" value={userInfo.userId} strong />
+                                <InfoRow label="Nomor HP" value={userInfo.phone} />
+                                <InfoRow label="Email" value={userInfo.email} />
+                                <InfoRow label="Cabang" value={userInfo.branch} />
+                                <InfoRow label="Terakhir diverifikasi" value={userInfo.verifiedAt} last />
 
                                 <Button
-                                    onClick={() => setActiveTab("statement")}
+                                    onClick={() => setActiveTab("users")}
                                     className="w-full h-8 text-xs bg-white border-2 border-[#00A3A8] text-[#00A3A8] mt-2"
                                 >
-                                    Lihat Statement
+                                    Lihat Daftar User
                                 </Button>
                             </Card>
                         </div>
                     </>
                 ) : (
                     <div className="space-y-3">
-                        <Label.Root className="text-gray-800 font-medium text-sm">Riwayat Pemesanan</Label.Root>
+                        <Label.Root className="text-gray-800 font-medium text-sm">Daftar User Terdaftar</Label.Root>
 
                         <Card className="p-0 overflow-hidden">
-                            <div className="grid grid-cols-3 gap-2 px-4 py-2.5 bg-gray-50 text-[10px] font-medium text-gray-500">
-                                <span>Tanggal</span>
-                                <span className="text-right">Beli (Rp)</span>
-                                <span className="text-right">Kg</span>
+                            <div className="grid grid-cols-[1.2fr_1fr_0.7fr] gap-2 px-4 py-2.5 bg-gray-50 text-[10px] font-medium text-gray-500">
+                                <span>Nama</span>
+                                <span>Role</span>
+                                <span className="text-right">Status</span>
                             </div>
-                            {orderHistory.map((row, i) => (
+                            {users.map((row, i) => (
                                 <div
-                                    key={row.date + i}
-                                    className={`grid grid-cols-3 gap-2 px-4 py-2.5 text-xs ${
-                                        i !== orderHistory.length - 1 ? "border-b border-gray-100" : ""
+                                    key={row.phone}
+                                    className={`grid grid-cols-[1.2fr_1fr_0.7fr] gap-2 px-4 py-2.5 text-xs ${
+                                        i !== users.length - 1 ? "border-b border-gray-100" : ""
                                     }`}
                                 >
-                                    <span className="text-gray-700">{row.date}</span>
-                                    <span className="text-right text-gray-800">
-                                        Rp{row.amount.toLocaleString("id-ID")}
-                                    </span>
-                                    <span className="text-right font-medium text-[#00A3A8]">
-                                        {row.grams} kg
+                                    <div>
+                                        <p className="font-medium text-gray-800">{row.name}</p>
+                                        <p className="text-[10px] text-gray-500">{row.phone}</p>
+                                    </div>
+                                    <span className="text-gray-700">{row.role}</span>
+                                    <span className={`text-right font-medium ${
+                                        row.status === "Aktif" ? "text-green-600" : "text-amber-500"
+                                    }`}>
+                                        {row.status}
                                     </span>
                                 </div>
                             ))}
@@ -151,7 +143,7 @@ export default function User() {
     )
 }
 
-function PortfolioRow({
+function InfoRow({
     label,
     value,
     strong,
@@ -163,9 +155,9 @@ function PortfolioRow({
     last?: boolean;
 }) {
     return (
-        <div className={`flex justify-between text-xs ${!last ? "pb-2 border-b border-gray-100" : ""}`}>
+        <div className={`flex justify-between gap-4 text-xs ${!last ? "pb-2 border-b border-gray-100" : ""}`}>
             <span className="text-gray-500">{label}</span>
-            <span className={strong ? "font-semibold text-gray-800" : "text-gray-700"}>{value}</span>
+            <span className={strong ? "font-semibold text-gray-800 text-right" : "text-gray-700 text-right"}>{value}</span>
         </div>
     )
 }
