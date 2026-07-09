@@ -16,7 +16,7 @@ export default function order() {
 
     const menuItems = [
         { label: "Buat Pesanan", path: "/LPG/transaction_management/buat_pesanan" },
-        { label: "Transaksi", path: "/LPG/transaction_management/transaksi" },
+        { label: "Riwayat Transaksi LPG", path: "/LPG/transaction_management/transaksi" },
     ];
 
     return (

@@ -10,7 +10,7 @@ export default function OrderGold() {
 
     const menuItems = [
         { label: "Buat Pesanan Emas", path: "/GOLD/transaction_management/buat_pesanan" },
-        { label: "Transaksi Emas", path: "/GOLD/transaction_management/transaksi" },
+        { label: "Riwayat Transaksi Emas", path: "/GOLD/transaction_management/transaksi" },
     ];
 
     return (

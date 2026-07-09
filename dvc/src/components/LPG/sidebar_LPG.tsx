@@ -3,11 +3,11 @@
 import { X } from "lucide-react";
 import Logo from '@/components/logo';
 import Link from "next/link";
-import Logo_side from "@/components/logo_sidebar";
+import SidebarLogo from "@/components/logo_sidebar";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function Sidebar({
+export default function LpgSidebar({
     open,
     onClose,
 }: {
@@ -19,9 +19,9 @@ export default function Sidebar({
     const router = useRouter();
 
     const menuItems = [
-        { img: "/img/dashboard.png", label: "Dashboard", path: "/LPG/dashboard" },
-        { img: "/img/users.png", label: "Profil Saya", path: "/LPG/user-management" },
-        { img: "/img/transaction.png", label: "Transaction Management", path: "/LPG/transaction_management" },
+        { iconSrc: "/img/dashboard.png", label: "Dashboard", path: "/LPG/dashboard" },
+        { iconSrc: "/img/users.png", label: "Profil Saya", path: "/LPG/user-management" },
+        { iconSrc: "/img/transaction.png", label: "Transaction Management", path: "/LPG/transaction_management" },
     ];
 
     return (
@@ -35,7 +35,7 @@ export default function Sidebar({
              transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full" }`}>
             <div className="flex items-center justify-between p-4 border-b ">
                 <span>
-                    <Logo_side />
+                    <SidebarLogo />
                 </span>
                 <button onClick={onClose}>
                    <X  />
@@ -45,7 +45,7 @@ export default function Sidebar({
                      {menuItems.map((item) => (
                     <MenuItem 
                         key={item.path}
-                        img={item.img}
+                        iconSrc={item.iconSrc}
                         label={item.label} 
                         path={item.path}
                         isActive={pathname === item.path}
@@ -60,13 +60,13 @@ export default function Sidebar({
 
 
 function MenuItem({ 
-    img,
+    iconSrc,
     label, 
     path,
     isActive,
     onClose
 }: { 
-    img : string;
+    iconSrc : string;
     label: string;
     path: string;
     isActive?: boolean;
@@ -86,8 +86,8 @@ function MenuItem({
       `}
     >
         <div className="flex items-center gap-3">
-            {img && (
-                <Image src={img} alt={label} width={50} height={24} className="w-8 h-8 object-contain bg-white rounded-full m-1 p-1"/>
+            {iconSrc && (
+                <Image src={iconSrc} alt={label} width={50} height={24} className="w-8 h-8 object-contain bg-white rounded-full m-1 p-1"/>
             )}
         </div>
 

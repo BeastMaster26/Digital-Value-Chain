@@ -15,7 +15,7 @@ const userInfo = {
     verifiedAt: "22/12/2025 10:05:00",
 };
 
-export default function User() {
+export default function UserProfile() {
     return (
         <div className="max-w-md mx-auto bg-white">
             <div className="px-4 pt-3 pb-6 space-y-4">
