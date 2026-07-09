@@ -125,7 +125,7 @@ export default function BuatPesanan(){
         <CardContent className="px-4 ">
         <div className="flex justify-between items-center  ">
         <div>
-        <h2 className="font-bold text-2xl">Profil Saya</h2>
+        <h2 className="font-bold text-2xl">User Management</h2>
         </div>
         </div>
 

@@ -1,4 +1,4 @@
-import LoginFormGold from '@/components/GOLD/LoginForm_GOLD';
+import LoginForm from '@/components/LPG/LoginForm_LPG';
 import Logo from '@/components/logo';
 import SvgComponent from '@/components/logo2';
 export default function LoginPage(){
@@ -10,7 +10,7 @@ export default function LoginPage(){
       {/* overlay */}
       
       <Logo />
-      <LoginFormGold />
+      <LoginForm />
       
     </div>
     );

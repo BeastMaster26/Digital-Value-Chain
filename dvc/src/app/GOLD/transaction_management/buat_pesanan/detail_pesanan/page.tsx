@@ -1,18 +1,18 @@
 "use client";
 
-import Body from "@/components/LPG/body-done";
-import Transaksi from "@/components/LPG/Transaksi";
-import DayCard from "../../../components/LPG/DayCard";
-import Header from "@/components/LPG/Header"
+import Body from "@/components/GOLD/body-done";
+import Transaksi from "@/components/GOLD/Transaksi";
+import DayCard from "@/components/GOLD/DayCard";
+import Header from "@/components/GOLD/Header_GOLD"
 import { Card, CardContent } from "@/components/ui/card";
-import Sidebar from "@/components/LPG/sidebar_LPG";
+import Sidebar from "@/components/GOLD/sidebar_GOLD";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
 import Norton from "@/components/norton";
 import { pageToRoute } from "next/dist/build/utils";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/LPG/navbar";
+import Navbar from "@/components/GOLD/navbar_GOLD";
 import Profile from "@/components/profile";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -27,11 +27,10 @@ Tooltip,
 ResponsiveContainer,
 } from "recharts"
 
-import Order from "@/components/LPG/order_LPG";
+import Order from "@/components/GOLD/order_GOLD";
 
-import Buat_p from "@/components/LPG/buat_pesanan_LPG";
-
-import User from "@/components/LPG/user";
+import Buat_p from "@/components/GOLD/buat_pesanan_GOLD";
+import DetailPesanan from "@/components/GOLD/detail_pesanan_GOLD";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },
@@ -44,7 +43,7 @@ const lineData = [
 ]
 
 
-const tabungData = [
+const emasData = [
 { day: "06 Jan", value: 50 },
 { day: "07 Jan", value: 0 },
 { day: "08 Jan", value: 25 },
@@ -53,7 +52,7 @@ const tabungData = [
 { day: "11 Jan", value: 0 },
 { day: "12 Jan", value: 0 },
 ]
-export default function BuatPesanan(){
+export default function Pesanan(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -61,36 +60,36 @@ export default function BuatPesanan(){
     {
       day: "Senin",
       date: "2026-02-02", 
-      count: 200,
-      label: "Tabung",
+      count: 25,
+      label: "Gram",
       status: "success",
     },
     {
       day: "Selasa",
       date: "2026-02-03",
-      count: 156,
-      label: "Tabung",
+      count: 18,
+      label: "Gram",
       status: "success",
     },
     {
       day: "Rabu",
       date: "2026-02-04",
-      count: 80,
-      label: "Tabung",
+      count: 12,
+      label: "Gram",
       status: "success",
     },
     {
       day: "Kamis",
       date: "2026-02-05", 
       count: 0,
-      label: "Tabung",
+      label: "Gram",
       status: "error",
     },
     {
       day: "Jumat",
       date: "2026-02-06",
-      count: 178,
-      label: "Tabung",
+      count: 30,
+      label: "Gram",
       status: "success",
     },
   ];
@@ -125,12 +124,12 @@ export default function BuatPesanan(){
         <CardContent className="px-4 ">
         <div className="flex justify-between items-center  ">
         <div>
-        <h2 className="font-bold text-2xl">Profil Saya</h2>
+        <h2 className="font-bold text-2xl">Buat Pesanan Emas</h2>
         </div>
         </div>
 
    <div className="space-y-5">
-   <User />
+   <DetailPesanan />
 </div>
 </CardContent>
 </Card>

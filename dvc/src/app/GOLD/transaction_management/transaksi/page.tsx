@@ -1,7 +1,6 @@
 "use client";
 
 import Body from "@/components/GOLD/body-done";
-import Transaksi from "@/components/GOLD/Transaksi";
 import DayCard from "@/components/GOLD/DayCard";
 import Header from "@/components/GOLD/Header_GOLD"
 import { Card, CardContent } from "@/components/ui/card";
@@ -26,15 +25,78 @@ YAxis,
 Tooltip,
 ResponsiveContainer,
 } from "recharts"
-import { Capsule } from "@/components/Capsule";
+
+import Transaksi from "@/components/GOLD/transaksi_1";
+
+const lineData = [
+{ day: "06 Jan", value: 800000 },
+{ day: "07 Jan", value: 0 },
+{ day: "08 Jan", value: 400000 },
+{ day: "09 Jan", value: 1200000 },
+{ day: "10 Jan", value: 1600000 },
+{ day: "11 Jan", value: 0 },
+{ day: "12 Jan", value: 0 },
+]
 
 
-
-export default function DashboardPage(){
+const emasData = [
+{ day: "06 Jan", value: 50 },
+{ day: "07 Jan", value: 0 },
+{ day: "08 Jan", value: 25 },
+{ day: "09 Jan", value: 75 },
+{ day: "10 Jan", value: 100 },
+{ day: "11 Jan", value: 0 },
+{ day: "12 Jan", value: 0 },
+]
+export default function BuatPesanan(){
     const [open, setOpen] = useState(false);
-   
+    const router = useRouter();
+    const [currentDate, setCurrentDate] = useState(new Date());
+    const daysData = [
+    {
+      day: "Senin",
+      date: "2026-02-02", 
+      count: 25,
+      label: "Gram",
+      status: "success",
+    },
+    {
+      day: "Selasa",
+      date: "2026-02-03",
+      count: 18,
+      label: "Gram",
+      status: "success",
+    },
+    {
+      day: "Rabu",
+      date: "2026-02-04",
+      count: 12,
+      label: "Gram",
+      status: "success",
+    },
+    {
+      day: "Kamis",
+      date: "2026-02-05", 
+      count: 0,
+      label: "Gram",
+      status: "error",
+    },
+    {
+      day: "Jumat",
+      date: "2026-02-06",
+      count: 30,
+      label: "Gram",
+      status: "success",
+    },
+  ];
 
-   
+   const isToday = (dateString: string) => {
+    const itemDate = new Date(dateString);
+    return (
+    itemDate.getDate() === currentDate.getDate() && itemDate.getMonth() === currentDate.getMonth() 
+    && itemDate.getFullYear() === currentDate.getFullYear() 
+    )
+   }
 
     return (
         
@@ -52,13 +114,17 @@ export default function DashboardPage(){
 
     {/*headers*/}
      <Header />
-    
+     
     {/*Body*/}
-            <Card className="rounded-xs shadow mb-4 bg-white/70 backdrop-blur-md border-none ">
+            <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
         <CardContent className="px-4 ">
-        <Body />
-   <div className="space-y-4">
-  <DayCard />
+        <div className="flex justify-between items-center  ">
+        <div>
+        <h2 className="font-bold text-2xl">Buat Pesanan Emas</h2>
+        </div>
+        </div>
+
+   <div className="space-y-5">
   <Transaksi />
 </div>
 </CardContent>

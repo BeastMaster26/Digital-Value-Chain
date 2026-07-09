@@ -1,18 +1,18 @@
 "use client";
 
-import Body from "@/components/GOLD/body-done";
-import Transaksi from "@/components/GOLD/Transaksi";
-import DayCard from "@/components/GOLD/DayCard";
-import Header from "@/components/GOLD/Header_GOLD"
+import Body from "@/components/LPG/body-done";
+import Transaksi from "@/components/LPG/Transaksi";
+import DayCard from "../../../components/LPG/DayCard";
+import Header from "@/components/LPG/Header"
 import { Card, CardContent } from "@/components/ui/card";
-import Sidebar from "@/components/GOLD/sidebar_GOLD";
+import Sidebar from "@/components/LPG/sidebar_LPG";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
 import Norton from "@/components/norton";
 import { pageToRoute } from "next/dist/build/utils";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/GOLD/navbar_GOLD";
+import Navbar from "@/components/LPG/navbar";
 import Profile from "@/components/profile";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";

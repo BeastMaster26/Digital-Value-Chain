@@ -20,7 +20,7 @@ export default function Sidebar({
 
     const menuItems = [
         { img: "/img/dashboard.png", label: "Dashboard", path: "/LPG/dashboard" },
-        { img: "/img/users.png", label: "User Management", path: "/LPG/user-management" },
+        { img: "/img/users.png", label: "Profil Saya", path: "/LPG/user-management" },
         { img: "/img/transaction.png", label: "Transaction Management", path: "/LPG/transaction_management" },
     ];
 

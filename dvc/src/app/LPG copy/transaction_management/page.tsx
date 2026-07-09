@@ -28,10 +28,7 @@ ResponsiveContainer,
 } from "recharts"
 
 import Order from "@/components/LPG/order_LPG";
-
-import Buat_p from "@/components/LPG/buat_pesanan_LPG";
-
-import User from "@/components/LPG/user";
+import Body_Transaksi from "@/components/LPG/body-transaksi";
 
 const lineData = [
 { day: "06 Jan", value: 800000 },
@@ -53,7 +50,7 @@ const tabungData = [
 { day: "11 Jan", value: 0 },
 { day: "12 Jan", value: 0 },
 ]
-export default function BuatPesanan(){
+export default function DashboardPage(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -123,14 +120,9 @@ export default function BuatPesanan(){
     {/*Body*/}
             <Card className="rounded-xs shadow mb-4 bg-white backdrop-blur-md border-none ">
         <CardContent className="px-4 ">
-        <div className="flex justify-between items-center  ">
-        <div>
-        <h2 className="font-bold text-2xl">Profil Saya</h2>
-        </div>
-        </div>
-
-   <div className="space-y-5">
-   <User />
+        <Body_Transaksi />
+   <div className="space-y-4">
+   <Order/>
 </div>
 </CardContent>
 </Card>
