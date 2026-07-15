@@ -41,11 +41,11 @@ export default function detail_pesanan() {
             <div className="grid grid-cols-1 [&>div]:flex [&>div]:justify-between space-y-2">
                <div >
                   <h1 className="">Pangkalan</h1>
-                   <h1 className="">DBW01 - Toko DBW</h1>
+                   <h1 className="">DBW01 - DBW</h1>
                </div>
                <div>
                   <h1 className="">Agen</h1>
-                   <h1 className="">DBW02 - Toko Digital W</h1>
+                   <h1 className="">DBW02 - Digital W</h1>
                </div>
                <div>
                   <h1 className="">Tanggal Kirim</h1>

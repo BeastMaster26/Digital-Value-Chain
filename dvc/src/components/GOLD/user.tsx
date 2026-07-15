@@ -6,7 +6,7 @@ import { Label } from "radix-ui";
 
 const userInfo = {
     name: "Ahmad Fauzi",
-    role: "Pemilik Toko Emas",
+    role: "Pemilik Emas",
     userId: "USR-GOLD-001274",
     phone: "0812-3456-7890",
     email: "ahmad.gold@bewize.co.id",

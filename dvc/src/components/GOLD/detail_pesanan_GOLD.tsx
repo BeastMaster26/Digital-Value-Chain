@@ -22,7 +22,7 @@ export default function DetailPesananGold() {
     return (
       <div className="space-y-2">
         <div className="grid grid-cols-1 [&>div]:flex [&>div]:justify-between space-y-2 text-xs">
-          <div><h1>Supplier Emas</h1><h1>GLD01 - Toko Emas DBW</h1></div>
+          <div><h1>Supplier Emas</h1><h1>GLD01 - Emas DBW</h1></div>
           <div><h1>Pembeli</h1><h1>GLD02 - Digital Gold Partner</h1></div>
           <div><h1>Tanggal Transaksi</h1><h1>16/01/2026</h1></div>
           <div><h1>PO No.</h1><h1>BSIDVCGOLD01002000300004</h1></div>

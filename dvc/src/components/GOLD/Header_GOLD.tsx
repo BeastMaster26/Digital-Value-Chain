@@ -18,7 +18,7 @@ export default function HeaderGold(){
             </div>
             <div>
               <p className="font-semibold text-sm text-[#00A3A8]">GLD01</p>
-              <p className="text-xs text-[#F8C65F]">TOKO EMAS DBW</p>
+              <p className="text-xs text-[#F8C65F]">EMAS DBW</p>
             </div>
           </div>
           <div className="h-5 w-5">

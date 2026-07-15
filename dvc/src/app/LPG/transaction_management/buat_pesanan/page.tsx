@@ -55,43 +55,7 @@ export default function BuatPesanan(){
     const [open, setOpen] = useState(false);
     const router = useRouter();
     const [currentDate, setCurrentDate] = useState(new Date());
-    const daysData = [
-    {
-      day: "Senin",
-      date: "2026-02-02", 
-      count: 200,
-      label: "Tabung",
-      status: "success",
-    },
-    {
-      day: "Selasa",
-      date: "2026-02-03",
-      count: 156,
-      label: "Tabung",
-      status: "success",
-    },
-    {
-      day: "Rabu",
-      date: "2026-02-04",
-      count: 80,
-      label: "Tabung",
-      status: "success",
-    },
-    {
-      day: "Kamis",
-      date: "2026-02-05", 
-      count: 0,
-      label: "Tabung",
-      status: "error",
-    },
-    {
-      day: "Jumat",
-      date: "2026-02-06",
-      count: 178,
-      label: "Tabung",
-      status: "success",
-    },
-  ];
+    
 
    const isToday = (dateString: string) => {
     const itemDate = new Date(dateString);

@@ -25,7 +25,7 @@ export default function Header(){
     </div>
 <div>
     <p className="font-semibold text-sm text-[#00A3A8]">DBW01</p>
-    <p className="text-xs text-[#F8C65F]">TOKO DBW</p>
+    <p className="text-xs text-[#F8C65F]">DBW</p>
 </div>
     </div>
 <div className="h-5 w-5">
