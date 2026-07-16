@@ -12,7 +12,7 @@ interface OTPContextValue {
 
 const OTPContext = React.createContext<OTPContextValue | null>(null);
 
-export interface InputOTPProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> {
+export interface InputOTPProps extends React.ComponentPropsWithoutRef<"div"> {
   maxLength?: number;
   onChange?: (value: string) => void;
   children: React.ReactNode;
