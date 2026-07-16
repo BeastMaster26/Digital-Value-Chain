@@ -59,7 +59,13 @@ export function InputOTPGroup({
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div className={cn("flex justify-center gap-2", className)} {...props}>
+    <div
+      className={cn(
+        "flex flex-wrap justify-center gap-2 max-w-full",
+        className
+      )}
+      {...props}
+    >
       {children}
     </div>
   );
@@ -123,7 +129,7 @@ export const InputOTPSlot = React.forwardRef<HTMLInputElement, InputOTPSlotProps
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         className={cn(
-          "h-14 w-14 rounded-xl border border-slate-300 bg-slate-50 text-center text-xl font-semibold text-black outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200",
+          "h-14 min-w-[3rem] flex-1 rounded-xl border border-slate-300 bg-slate-50 text-center text-xl font-semibold text-black outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-200",
           className
         )}
         {...props}
